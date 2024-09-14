@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    function quicksort(arr, inicio, fim) {
+        if (inicio < fim) {
+      let pivo = particiona(arr, inicio, fim);
+      quicksort(arr, inicio, pivo - 1);
+      quicksort(arr, pivo + 1, fim);
+  }
+    }
+
+    function particiona(arr, inicio, fim) {
+        let pivo = arr[fim];
+        let i = inicio - 1;
+        for (let j = inicio; j < fim; j++) {
+            if (arr[j] < pivo) {
+                i++;
+                [arr[i], arr[j]] = [arr[j], arr[i]]; // Troca de posições
+            }
+        }
+        [arr[i + 1], arr[fim]] = [arr[fim], arr[i + 1]]; // Troca de posições
+        return i + 1;
+}
+
+let arr = [10, 7, 8, 9, 1, 5];
+quicksort(arr, 0, arr.length - 1);
+document.write("Array ordenado:", arr);
+  
+</script>
+</body>
+
+</html>
