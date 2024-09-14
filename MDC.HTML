@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+  <script>
+    function calculaMDC(a, b) {
+        while (b !== 0) {
+            let temp = b;
+            b = a % b;
+            a = temp;
+        }
+    return a;
+    }
+
+    let a = parseInt(prompt("Digite o primeiro número:"));
+    let b = parseInt(prompt("Digite o segundo número:"));
+
+    let mdc = calculaMDC(a, b);
+    document.write("O MDC de " + a + " e " + b + " é: " + mdc);
+  </script>
+</body>
+
+</html>
