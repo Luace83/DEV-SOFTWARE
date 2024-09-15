@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class AlunosAprovados {
+class contagem {
   public static void main(String[] args) {
     Scanner prompt = new Scanner(System.in);
     int nota, cont = 0, i = 0;
