@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class QuicksortSimples {
+ class ordenacao {
     public static void main(String[] args) {
         int[] array = {10, 7, 8, 9, 1, 5};
         quicksort(array, 0, array.length - 1);
